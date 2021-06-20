@@ -58,7 +58,7 @@ exports.getById =  (req, res) => {
 
 exports.postBlog = (req, res) => {
     let { heading, blog } = req.body;
-    let decodedToken = JWT.verify(req.headers.token, "ssshhhItsASecretDontTellAnyone"); 
+    let decodedToken = JWT.verify(req.headers.token, "Giriraj Singh"); 
     let userId = decodedToken[ Object.keys(decodedToken)[0]];
     userId = mongoose.Types.ObjectId(userId);
     let blogPost = new Blog({
